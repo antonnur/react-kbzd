@@ -1,75 +1,25 @@
-type StarProps = {
+type StarPropsType = {
   selected: boolean
 }
-type RatingProps = {
-  value: number;
+type RatingPropsType = {
+  value: 1 | 2 | 3 | 4 | 5 | 0
 }
 
-export function Rating({value}: RatingProps) {
+export function Rating({value}: RatingPropsType) {
   console.log('Rating rendered')
-  if (value === 1) {
-    return (
-      <div>
-        <Star selected={true}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-      </div>
-    )
-  } else if (value === 2) {
-    return (
-      <div>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-      </div>
-    )
-  } else if (value === 3) {
-    return (
-      <div>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-      </div>
-    )
-  } else if (value === 4) {
-    return (
-      <div>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={false}/>
-      </div>
-    )
-  } else if (value === 5) {
-    return (
-      <div>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-      </div>
-    )
-  }
+
   return (
     <div>
-      <Star selected={false}/>
-      <Star selected={false}/>
-      <Star selected={false}/>
-      <Star selected={false}/>
-      <Star selected={false}/>
+      <Star selected={value > 0}/>
+      <Star selected={value > 1}/>
+      <Star selected={value > 2}/>
+      <Star selected={value > 3}/>
+      <Star selected={value > 4}/>
     </div>
   )
 }
 
-function Star({selected}: StarProps) {
+function Star({selected}: StarPropsType) {
   console.log('Star rendered')
   if (selected) {
     return <span><b>star </b></span>

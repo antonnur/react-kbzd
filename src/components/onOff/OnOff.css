@@ -1,0 +1,25 @@
+.onStyle, .offStyle{
+  margin-left: 3px;
+  display: inline-block;
+  width: 65px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.onStyle{
+  background-color: white;
+}
+.offStyle{
+  background-color: white;
+}
+
+.indicatorStyle {
+  margin: 0 0 -23px 5px ;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: white;
+}
