@@ -1,4 +1,6 @@
 .App {
+  width: 600px;
+  margin: 20px auto;
   padding: 30px;
   display: block;
 }

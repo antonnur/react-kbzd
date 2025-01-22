@@ -1,9 +1,12 @@
+import {useState} from 'react';
+
 type PropsType = {
-  on: boolean;
   onChange: (on: boolean) => void;
 }
 
-export function OnOff({on, onChange}: PropsType) {
+export function UncontrolledOnOff({onChange}: PropsType) {
+
+  let [on, setOn] = useState(false) //hook with init value
 
   const onStyle = {
     marginLeft: '3px',
@@ -32,14 +35,22 @@ export function OnOff({on, onChange}: PropsType) {
     backgroundColor: on ? 'green' : 'red',
   }
 
+  const onClickHandler = () => {
+    setOn(true)
+    onChange(true)
+  }
+
+  const offClickHandler = () => {
+    setOn(false)
+    onChange(false)
+  }
+
   return <div>
-    <div style={onStyle} onClick={() => {
-      onChange(true)
-    }}>On
+    <div style={onStyle}
+         onClick={onClickHandler}>On
     </div>
-    <div style={offStyle} onClick={() => {
-      onChange(false)
-    }}>Off
+    <div style={offStyle}
+         onClick={offClickHandler}>Off
     </div>
     <div style={indicatorStyle}></div>
   </div>
