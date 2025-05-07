@@ -10,7 +10,6 @@ type StarPropsType = {
 type RatingPropsType = {
   defaultValue?: 1 | 2 | 3 | 4 | 5 | 0
   onChange: (value: RatingValueType) => void
-
 }
 
 export function UncontrolledRating({defaultValue, onChange}: RatingPropsType) {
