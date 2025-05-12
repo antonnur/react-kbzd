@@ -4,6 +4,7 @@ export default {
   title: 'Input',
 }
 
+// 12 - Uncontrolled input
 export const UncontrolledInput = () => <input/>
 
 export const TrackValueOfUncontrolledInput = () => {
@@ -30,7 +31,9 @@ export const GetValueOfUncontrolledInputByButtonPress = () => {
     <button onClick={save}>save</button>
     - actual value: {value}</>
 }
+//end * 12 - Uncontrolled input
 
+// 13 - Controlled input, FLUX
 export const ControlledInput = () => {
   const [parentValue, setParentValue] = useState('')
   return < input value={parentValue} onChange={(e) => setParentValue(e.currentTarget.value)}/>
@@ -50,5 +53,7 @@ export const ControlledSelect = () => {
     <option value="3">Boo</option>
   </select>
 }
+// end * 13 - Controlled input, FLUX;
 
+// 12 - Uncontrolled input
 export const ControlledInputWithFixedValue = () => <input value={'Controlled Input'}/>
