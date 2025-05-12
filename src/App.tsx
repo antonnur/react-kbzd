@@ -1,5 +1,5 @@
 import './App.css'
-// import './components/onOff/OnOff.css'
+import './components/onOff/OnOff.css'
 import {Accordion} from './components/Accordion/Accordion';
 import {Rating, RatingValueType} from './components/Rating/Rating';
 import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOff.tsx';
@@ -11,7 +11,6 @@ import {OnOff} from './components/onOff/OnOff';
 type PageTitlePropsType = {
   title: string,
 }
-
 
 export const App = () => {
   console.log('App rendered');
