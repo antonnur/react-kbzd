@@ -25,7 +25,7 @@ export const App = () => {
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <Accordion title={'Menu'} collapsed={accordionCollapsed} onChange={() => {
         setAccordionCollapsed(!accordionCollapsed)
-      }} onClick={() => setAccordionCollapsed(!accordionCollapsed)} items={[]}/>
+      }}/>
       <OnOff on={switchOn} onChange={setSwitchOn}/>
       {/*<OnOff on={true} onChange={(on) => {alert(on)}}/>*/}
       <UncontrolledAccordion title={'Users'} onClick={() => {
