@@ -1,0 +1,61 @@
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 5px solid #333;
+}
+
+.clock-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  transition: transform 0.05s ease-in-out; /* Плавное движение стрелок */
+}
+
+.hour-hand {
+  width: 8px;
+  height: 60px;
+  background-color: #333;
+  margin-left: -4px; /* Центрируем по оси X */
+}
+
+.minute-hand {
+  width: 4px;
+  height: 90px;
+  background-color: #666;
+  margin-left: -2px; /* Центрируем по оси X */
+}
+
+.second-hand {
+  width: 2px;
+  height: 100px;
+  background-color: #e74c3c; /* Красный цвет для секундной стрелки */
+  margin-left: -1px; /* Центрируем по оси X */
+}
+
+/* Центральный элемент часов */
+.clock::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
