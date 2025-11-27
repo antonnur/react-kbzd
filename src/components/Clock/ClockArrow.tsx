@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Clock.css' // CSS для стилизации
 
-type PropsType = {}
+type PropsType = { date: Date }
 
 export const ClockArrow: React.FC<PropsType> = () => {
   const [time, setTime] = useState(new Date())
@@ -22,11 +22,14 @@ export const ClockArrow: React.FC<PropsType> = () => {
   const secondDeg = seconds * 6
 
   return (
-    <div className="clock">
-      <div className="clock-face">
-        <div className="hand hour-hand" style={{ transform: `rotate(${hourDeg}deg)` }}></div>
-        <div className="hand minute-hand" style={{ transform: `rotate(${minuteDeg}deg)` }}></div>
-        <div className="hand second-hand" style={{ transform: `rotate(${secondDeg}deg)` }}></div>
+    <div>
+      <h3>Аналоговые часы</h3>
+      <div className="clock">
+        <div className="clock-face">
+          <div className="hand hour-hand" style={{ transform: `rotate(${hourDeg}deg)` }}></div>
+          <div className="hand minute-hand" style={{ transform: `rotate(${minuteDeg}deg)` }}></div>
+          <div className="hand second-hand" style={{ transform: `rotate(${secondDeg}deg)` }}></div>
+        </div>
       </div>
     </div>
   )

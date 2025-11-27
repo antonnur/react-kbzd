@@ -1,4 +1,4 @@
-import { Clock } from './Clock'
+import { Clock } from './ClockDigital'
 import { ClockArrow } from './ClockArrow'
 
 export default {
@@ -7,9 +7,9 @@ export default {
 }
 
 export const ClockDigital = () => {
-  return <Clock />
+  return <Clock date={new Date()} />
 }
 
 export const ClockAnalog = () => {
-  return <ClockArrow />
+  return <ClockArrow date={new Date()} />
 }

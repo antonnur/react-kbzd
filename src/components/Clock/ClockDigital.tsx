@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-type PropsType = {}
+type PropsType = {
+  date: Date
+}
 
 export const Clock: React.FC<PropsType> = () => {
   const [time, setTime] = useState(new Date())
@@ -27,7 +29,7 @@ export const Clock: React.FC<PropsType> = () => {
 
   return (
     <div>
-      <h3>Живые часы</h3>
+      <h3>Цифровые часы</h3>
       <div>{formatTime(time)}</div>
     </div>
   )
